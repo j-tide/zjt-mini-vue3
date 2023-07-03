@@ -91,14 +91,36 @@
 
 #### 二、runtime-core篇
 
-[📃 01_实现初始化component流程]()
+[📃 01_实现初始化component流程](./docs/md/runtime/01_实现初始化component主流程.md)
+
+[📃 02_实现element渲染流程](./docs/md/runtime/02_实现element渲染流程.md)
+
+[📃 03_实现组件通信和插槽](./docs/md/runtime/03_实现组件通信和插槽.md)
+
+[📃 04_实现组件更新流程](./docs/md/runtime/04_实现组件更新流程.md)
+
+[📃 05_实现diff算法](./docs/md/runtime/05_实现diff算法.md)
+
+[📃 06_实现nextTick和运行时API](./docs/md/runtime/06_实现nextTick和运行时API.md)
+
+[📃 07_实现自定义渲染器](./docs/md/runtime/07_实现自定义渲染器.md)
 
 
 #### 三、compiler篇
 
-[📰 01_编译模块概述]()
+[📰 01_编译模块概述](./docs/md/compiler/01_编译模块概述.md)
 
-✍️ 待续... 
+[📰 00_parse的实现原理&有限状态机](./docs/md/compiler/00_parse的实现原理&有限状态机.md)
+
+[📰 02_实现parse解析流程](./docs/md/compiler/02_实现parse解析流程.md)
+
+[📰 03_实现transform转换流程](./docs/md/compiler/03_实现transform转换流程.md)
+
+[📰 04_实现codegen生成render函数](./docs/md/compiler/04_实现codegen生成render函数.md)
+
+[📰 05_实现compiler与runtime联动](./docs/md/compiler/05_实现compiler与runtime联动.md)
+
+✍️ 以上文章对应仓库当前的最简实现，后续可以继续补充更多语法和边界情况。
 
 
 ## 目前已实现功能点
@@ -132,19 +154,24 @@
 - [x] 支持 component emit
 - [x] 支持 单节点、多节点及具名slots
 - [x] 可以在 render 函数中获取 setup 返回的对象
-- [x] nextTick 的实现
 - [x] 支持 proxy
 - [x] 支持 getCurrentInstance
 - [x] 支持 provide/inject
-- [x] 支持 watchEffect
+- [x] 支持 nextTick 和异步更新队列
+- [x] 支持 element 更新
+- [x] 支持 keyed children 的双端对比和节点移动
+- [x] 支持自定义渲染器
 
 #### compiler-core
 - [x] 解析插值
 - [x] 解析 element
 - [x] 解析 text
+- [x] 支持 transform 插件
+- [x] 支持 codegen 生成 render 函数
+- [x] 支持 template 编译为 render 函数
 
 #### runtime-dom
-- [x] 支持 custom renderer 
+- [x] 支持 custom renderer
 
 #### runtime-test
 - [x] 支持测试 runtime-core 的逻辑
